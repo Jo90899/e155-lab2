@@ -1,5 +1,6 @@
 // Joseph Abdelmalek
 // jabdelmalek@hmc.edu
+// 9/16/24
 // Testbench to test the lab2 top module
 
 
