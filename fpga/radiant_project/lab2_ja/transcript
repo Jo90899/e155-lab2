@@ -1,0 +1,380 @@
+# Reading pref.tcl
+# //  Questa Lattice OEM Edition-64
+# //  Version 2024.2 win64 May 20 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+vsim work.lab2testbench
+# vsim work.lab2testbench 
+# Start time: 15:06:30 on Sep 16,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error: C:/Users/josep/Desktop/MicroPs/labs/lab2/fpga/radiant_project/lab2_ja/source/impl_1/lab2_ja.sv(17): Module 'HSOSC' is not defined.
+#  For instance 'hf_osc' at path 'lab2testbench.dut'
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=0.
+# Error loading design
+# End time: 15:06:30 on Sep 16,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vsim -voptargs=+acc work.lab2testbench
+# vsim -voptargs="+acc" work.lab2testbench 
+# Start time: 15:06:43 on Sep 16,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Error: C:/Users/josep/Desktop/MicroPs/labs/lab2/fpga/radiant_project/lab2_ja/source/impl_1/lab2_ja.sv(17): Module 'HSOSC' is not defined.
+#  For instance 'hf_osc' at path 'lab2testbench.dut'
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=1.
+# Error loading design
+# End time: 15:06:44 on Sep 16,2024, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 1
+vsim -voptargs=+acc work.lab2testbench -L iCE40UP
+# vsim -voptargs="+acc" work.lab2testbench -L iCE40UP 
+# Start time: 15:07:10 on Sep 16,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vopt-143) Recognized 1 FSM in module "multiplex(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.lab2testbench(fast)
+# Loading work.lab2_ja(fast)
+# Loading iCE40UP.HSOSC(fast)
+# Loading work.summer(fast)
+# Loading work.multiplex(fast)
+# Loading work.seven_seg(fast)
+run -all
+# Break key hit
+# Simulation stop requested.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.lab2testbench(fast)
+# Loading work.lab2_ja(fast)
+# Loading iCE40UP.HSOSC(fast)
+# Loading work.summer(fast)
+# Loading work.multiplex(fast)
+# Loading work.seven_seg(fast)
+run
+run
+run
+run
+run
+run
+
+run
+
+
+run
+run
+run
+run
+run
+run
+run
+run
+run
+
+run
+
+run
+run
+
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run -all
+# Break key hit
+# Simulation stop requested.
+add wave -position end  sim:/lab2testbench/reset
+add wave -position end  sim:/lab2testbench/d1
+add wave -position end  sim:/lab2testbench/d2
+add wave -position end  sim:/lab2testbench/n1
+add wave -position end  sim:/lab2testbench/n2
+add wave -position end  sim:/lab2testbench/sum
+add wave -position end  sim:/lab2testbench/seg
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.lab2testbench(fast)
+# Loading work.lab2_ja(fast)
+# Loading iCE40UP.HSOSC(fast)
+# Loading work.summer(fast)
+# Loading work.multiplex(fast)
+# Loading work.seven_seg(fast)
+run -all
+# Break key hit
+# Simulation stop requested.
+quit -sim
+# End time: 15:18:22 on Sep 16,2024, Elapsed time: 0:11:12
+# Errors: 0, Warnings: 1
+vlog -reportprogress 300 -work work C:/Users/josep/Desktop/MicroPs/labs/lab2/fpga/radiant_project/lab2_ja/source/impl_1/lab2_ja.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 15:19:11 on Sep 16,2024
+# vlog -reportprogress 300 -work work C:/Users/josep/Desktop/MicroPs/labs/lab2/fpga/radiant_project/lab2_ja/source/impl_1/lab2_ja.sv 
+# -- Compiling module lab2_ja
+# 
+# Top level modules:
+# 	lab2_ja
+# End time: 15:19:11 on Sep 16,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/josep/Desktop/MicroPs/labs/lab2/fpga/radiant_project/lab2_ja/source/impl_1/lab2testbench.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 15:19:11 on Sep 16,2024
+# vlog -reportprogress 300 -work work C:/Users/josep/Desktop/MicroPs/labs/lab2/fpga/radiant_project/lab2_ja/source/impl_1/lab2testbench.sv 
+# -- Compiling module lab2testbench
+# 
+# Top level modules:
+# 	lab2testbench
+# End time: 15:19:11 on Sep 16,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/josep/Desktop/MicroPs/labs/lab2/fpga/radiant_project/lab2_ja/source/impl_1/multiplex.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 15:19:11 on Sep 16,2024
+# vlog -reportprogress 300 -work work C:/Users/josep/Desktop/MicroPs/labs/lab2/fpga/radiant_project/lab2_ja/source/impl_1/multiplex.sv 
+# -- Compiling module multiplex
+# 
+# Top level modules:
+# 	multiplex
+# End time: 15:19:11 on Sep 16,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/josep/Desktop/MicroPs/labs/lab2/fpga/radiant_project/lab2_ja/source/impl_1/seven_seg.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 15:19:11 on Sep 16,2024
+# vlog -reportprogress 300 -work work C:/Users/josep/Desktop/MicroPs/labs/lab2/fpga/radiant_project/lab2_ja/source/impl_1/seven_seg.sv 
+# -- Compiling module seven_seg
+# 
+# Top level modules:
+# 	seven_seg
+# End time: 15:19:11 on Sep 16,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/josep/Desktop/MicroPs/labs/lab2/fpga/radiant_project/lab2_ja/source/impl_1/summer.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 15:19:11 on Sep 16,2024
+# vlog -reportprogress 300 -work work C:/Users/josep/Desktop/MicroPs/labs/lab2/fpga/radiant_project/lab2_ja/source/impl_1/summer.sv 
+# -- Compiling module summer
+# 
+# Top level modules:
+# 	summer
+# End time: 15:19:11 on Sep 16,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -voptargs=+acc -L iCE40UP work.lab2testbench
+# vsim -voptargs="+acc" -L iCE40UP work.lab2testbench 
+# Start time: 15:19:30 on Sep 16,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.lab2testbench(fast)
+# Loading work.lab2_ja(fast)
+# Loading iCE40UP.HSOSC(fast)
+# Loading work.summer(fast)
+# Loading work.multiplex(fast)
+# Loading work.seven_seg(fast)
+add wave -position end  sim:/lab2testbench/reset
+add wave -position end  sim:/lab2testbench/d1
+add wave -position end  sim:/lab2testbench/d2
+add wave -position end  sim:/lab2testbench/n1
+add wave -position end  sim:/lab2testbench/n2
+add wave -position end  sim:/lab2testbench/sum
+add wave -position end  sim:/lab2testbench/seg
+run -all
+# Break key hit
+# Simulation stop requested.
+quit -sim
+# End time: 15:21:26 on Sep 16,2024, Elapsed time: 0:01:56
+# Errors: 0, Warnings: 1
+vlog -reportprogress 300 -work work C:/Users/josep/Desktop/MicroPs/labs/lab2/fpga/radiant_project/lab2_ja/source/impl_1/lab2_ja.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 15:21:30 on Sep 16,2024
+# vlog -reportprogress 300 -work work C:/Users/josep/Desktop/MicroPs/labs/lab2/fpga/radiant_project/lab2_ja/source/impl_1/lab2_ja.sv 
+# -- Compiling module lab2_ja
+# 
+# Top level modules:
+# 	lab2_ja
+# End time: 15:21:30 on Sep 16,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/josep/Desktop/MicroPs/labs/lab2/fpga/radiant_project/lab2_ja/source/impl_1/lab2testbench.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 15:21:30 on Sep 16,2024
+# vlog -reportprogress 300 -work work C:/Users/josep/Desktop/MicroPs/labs/lab2/fpga/radiant_project/lab2_ja/source/impl_1/lab2testbench.sv 
+# -- Compiling module lab2testbench
+# 
+# Top level modules:
+# 	lab2testbench
+# End time: 15:21:30 on Sep 16,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/josep/Desktop/MicroPs/labs/lab2/fpga/radiant_project/lab2_ja/source/impl_1/multiplex.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 15:21:30 on Sep 16,2024
+# vlog -reportprogress 300 -work work C:/Users/josep/Desktop/MicroPs/labs/lab2/fpga/radiant_project/lab2_ja/source/impl_1/multiplex.sv 
+# -- Compiling module multiplex
+# 
+# Top level modules:
+# 	multiplex
+# End time: 15:21:30 on Sep 16,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/josep/Desktop/MicroPs/labs/lab2/fpga/radiant_project/lab2_ja/source/impl_1/seven_seg.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 15:21:30 on Sep 16,2024
+# vlog -reportprogress 300 -work work C:/Users/josep/Desktop/MicroPs/labs/lab2/fpga/radiant_project/lab2_ja/source/impl_1/seven_seg.sv 
+# -- Compiling module seven_seg
+# 
+# Top level modules:
+# 	seven_seg
+# End time: 15:21:31 on Sep 16,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/josep/Desktop/MicroPs/labs/lab2/fpga/radiant_project/lab2_ja/source/impl_1/summer.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 15:21:31 on Sep 16,2024
+# vlog -reportprogress 300 -work work C:/Users/josep/Desktop/MicroPs/labs/lab2/fpga/radiant_project/lab2_ja/source/impl_1/summer.sv 
+# -- Compiling module summer
+# 
+# Top level modules:
+# 	summer
+# End time: 15:21:31 on Sep 16,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -voptargs=+acc -L iCE40UP work.lab2testbench
+# vsim -voptargs="+acc" -L iCE40UP work.lab2testbench 
+# Start time: 15:21:48 on Sep 16,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.lab2testbench(fast)
+# Loading work.lab2_ja(fast)
+# Loading iCE40UP.HSOSC(fast)
+# Loading work.summer(fast)
+# Loading work.multiplex(fast)
+# Loading work.seven_seg(fast)
+add wave -position end  sim:/lab2testbench/reset
+add wave -position end  sim:/lab2testbench/d1
+add wave -position end  sim:/lab2testbench/d2
+add wave -position end  sim:/lab2testbench/n1
+add wave -position end  sim:/lab2testbench/n2
+add wave -position end  sim:/lab2testbench/sum
+add wave -position end  sim:/lab2testbench/seg
+run -all
+# Break key hit
+# Break at an unknown location
+# Causality operation skipped due to absence of debug database file
+vlog -reportprogress 300 -work work C:/Users/josep/Desktop/MicroPs/labs/lab2/fpga/radiant_project/lab2_ja/source/impl_1/lab2_ja.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 15:51:16 on Sep 16,2024
+# vlog -reportprogress 300 -work work C:/Users/josep/Desktop/MicroPs/labs/lab2/fpga/radiant_project/lab2_ja/source/impl_1/lab2_ja.sv 
+# -- Compiling module lab2_ja
+# 
+# Top level modules:
+# 	lab2_ja
+# End time: 15:51:16 on Sep 16,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/josep/Desktop/MicroPs/labs/lab2/fpga/radiant_project/lab2_ja/source/impl_1/lab2testbench.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 15:51:16 on Sep 16,2024
+# vlog -reportprogress 300 -work work C:/Users/josep/Desktop/MicroPs/labs/lab2/fpga/radiant_project/lab2_ja/source/impl_1/lab2testbench.sv 
+# -- Compiling module lab2testbench
+# 
+# Top level modules:
+# 	lab2testbench
+# End time: 15:51:16 on Sep 16,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/josep/Desktop/MicroPs/labs/lab2/fpga/radiant_project/lab2_ja/source/impl_1/multiplex.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 15:51:16 on Sep 16,2024
+# vlog -reportprogress 300 -work work C:/Users/josep/Desktop/MicroPs/labs/lab2/fpga/radiant_project/lab2_ja/source/impl_1/multiplex.sv 
+# -- Compiling module multiplex
+# 
+# Top level modules:
+# 	multiplex
+# End time: 15:51:16 on Sep 16,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/josep/Desktop/MicroPs/labs/lab2/fpga/radiant_project/lab2_ja/source/impl_1/seven_seg.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 15:51:16 on Sep 16,2024
+# vlog -reportprogress 300 -work work C:/Users/josep/Desktop/MicroPs/labs/lab2/fpga/radiant_project/lab2_ja/source/impl_1/seven_seg.sv 
+# -- Compiling module seven_seg
+# 
+# Top level modules:
+# 	seven_seg
+# End time: 15:51:16 on Sep 16,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/josep/Desktop/MicroPs/labs/lab2/fpga/radiant_project/lab2_ja/source/impl_1/summer.sv
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 15:51:16 on Sep 16,2024
+# vlog -reportprogress 300 -work work C:/Users/josep/Desktop/MicroPs/labs/lab2/fpga/radiant_project/lab2_ja/source/impl_1/summer.sv 
+# -- Compiling module summer
+# 
+# Top level modules:
+# 	summer
+# End time: 15:51:17 on Sep 16,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vsim -voptargs=+acc -L iCE40UP work.lab2testbench
+# End time: 15:51:37 on Sep 16,2024, Elapsed time: 0:29:49
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" -L iCE40UP work.lab2testbench 
+# Start time: 15:51:37 on Sep 16,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vopt-143) Recognized 1 FSM in module "multiplex(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.lab2testbench(fast)
+# Loading work.lab2_ja(fast)
+# Loading iCE40UP.HSOSC(fast)
+# Loading work.summer(fast)
+# Loading work.multiplex(fast)
+# Loading work.seven_seg(fast)
+run -all
+add wave -position end  sim:/lab2testbench/reset
+add wave -position end  sim:/lab2testbench/d1
+add wave -position end  sim:/lab2testbench/d2
+add wave -position end  sim:/lab2testbench/n1
+add wave -position end  sim:/lab2testbench/n2
+add wave -position end  sim:/lab2testbench/sum
+add wave -position end  sim:/lab2testbench/seg
+# Break key hit
+# ** Error: (vsim-191) Questa has encountered an unexpected internal error: ./vsim/vs_actions_mac.c(37712). 
+# Please contact Questa support at https://support.sw.siemens.com
+# ** Error: (vsim-191) Questa has encountered an unexpected internal error: ./vsim/vs_actions_mac.c(37728). 
+# Please contact Questa support at https://support.sw.siemens.com
+# Simulation stop requested.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.lab2testbench(fast)
+# Loading work.lab2_ja(fast)
+# Loading iCE40UP.HSOSC(fast)
+# Loading work.summer(fast)
+# Loading work.multiplex(fast)
+# Loading work.seven_seg(fast)
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.lab2testbench(fast)
+# Loading work.lab2_ja(fast)
+# Loading iCE40UP.HSOSC(fast)
+# Loading work.summer(fast)
+# Loading work.multiplex(fast)
+# Loading work.seven_seg(fast)
+run -all
+# Break key hit
+# Simulation stop requested.
+# End time: 15:57:52 on Sep 16,2024, Elapsed time: 0:06:15
+# Errors: 0, Warnings: 1
