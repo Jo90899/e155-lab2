@@ -18,8 +18,8 @@
 				<BScanVal>0</BScanVal>
 			</Bypass>
 			<File>../../impl_1/lab2_ja_impl_1.bin</File>
-			<FileTime>09/16/24 21:26:42</FileTime>
-			<JedecChecksum>0x9688</JedecChecksum>
+			<FileTime>09/19/24 12:33:21</FileTime>
+			<JedecChecksum>0x6E7E</JedecChecksum>
 			<MemoryType>External SPI Flash Memory (SPI FLASH)</MemoryType>
 			<Operation>Erase,Program,Verify</Operation>
 			<Option>
@@ -60,7 +60,7 @@
 					<Family>SPI Serial Flash</Family>
 					<Name>W25Q32JV</Name>
 					<IDCode>0x15</IDCode>
-					<Package>5*5 24-ball TFBGA</Package>
+					<Package>208mil 8-pin SOIC</Package>
 					<Operation>Erase,Program,Verify</Operation>
 					<File>../../impl_1/lab2_ja_impl_1.bin</File>
 					<AddressBase>0x00000000</AddressBase>

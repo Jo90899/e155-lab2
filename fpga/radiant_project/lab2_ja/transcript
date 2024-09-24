@@ -13,22 +13,43 @@
 # // of the Customer's facilities without the express written permission of SISW,
 # // and may not be used in any way not expressly authorized by SISW.
 # //
-vsim work._opt2
-# vsim work._opt2 
-# Start time: 02:10:27 on Sep 17,2024
-# ** Warning: (vsim-1963) Explicit invocation on automatically named optimized design "_opt2" will not cause it to be locked.
+vsim -gui work.lab2_ja -L iCE40UP
+# vsim -gui work.lab2_ja -L iCE40UP 
+# Start time: 12:07:27 on Sep 19,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # Loading sv_std.std
-# Loading work.lab2testbench(fast)
 # Loading work.lab2_ja(fast)
 # Loading iCE40UP.HSOSC(fast)
-# Loading work.summer(fast)
-# Loading work.multiplex(fast)
-# Loading work.seven_seg(fast)
-add wave -position end  sim:/lab2testbench/reset
-add wave -position end  sim:/lab2testbench/d1
-add wave -position end  sim:/lab2testbench/d2
-add wave -position end  sim:/lab2testbench/n1
-add wave -position end  sim:/lab2testbench/n2
-add wave -position end  sim:/lab2testbench/sum
-add wave -position end  sim:/lab2testbench/seg
-run -all
+# Trace back: Error QStructure::sort: invalid command name ""
+#   <6:C:/mtitcl/vsim/qstructure.tc_:2478: ::QStructure::sort .main_pane.structure 0 ascending
+#   <5:eval:1: ::QStructure::structsort .main_pane.structure 0 ascending
+#   <4:eval:1: ::namespace inscope ::QStructure {structsort .main_pane.structure} 0 ascending
+#   >3:proc:26: ::.main_pane.structure.interior.cs.body.struct sort 0 ascending
+#   >2:proc:10: ::.main_pane.structure.interior.cs.body.struct _initializeSortColumn
+#   <1:eval:1: ::namespace inscope ::vsimwidgets::Hierarchy {::.main_pane.structure.interior.cs.body.struct _initializeSortColumn}
+add wave -position end  sim:/lab2_ja/reset
+add wave -position end  sim:/lab2_ja/n1
+add wave -position end  sim:/lab2_ja/n2
+add wave -position end  sim:/lab2_ja/d1
+add wave -position end  sim:/lab2_ja/d2
+add wave -position end  sim:/lab2_ja/sum
+add wave -position end  sim:/lab2_ja/seg
+add wave -position end  sim:/lab2_ja/clk
+force n1 1000
+force n2 0000
+run 100
+force reset 0
+run100
+# invalid command name "run100"
+run 100
+force reset 1
+run 100
+run 100
+force n1 4'b1
+force n1 4'd1
+force n2 4'd15
+run100
+# invalid command name "run100"
+run 100
+# End time: 13:34:40 on Sep 19,2024, Elapsed time: 1:27:13
+# Errors: 0, Warnings: 0
